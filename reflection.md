@@ -24,6 +24,16 @@ Document at least 3 bugs you found. Add rows as needed.
 |select "Hard" difficulty|ranger is larger than normal|range is 1-50 smaller than normal | none|app.py get_range_for_difficulty,
 |Secret 50, guessed 9 on the 2nd attempt |"Go HIGHER!" because 9 < 50 |Said the guess was too high. On even attempts the secret was turned into a string, so "9" > "50" was compared alphabetically |none |app.py lines 158-161, `if st.session_state.attempts % 2 == 0: secret = str(st.session_state.secret)`
 
+**Game session (original starter code)**
+
+```
+Difficulty: Normal | Secret (debug tab): 21 | Guess a number between 1 and 100. Attempts left: 7
+Guess   1 -> Go LOWER!          <- wrong, 1 is too low so it should say HIGHER
+Guess  99 -> Go HIGHER!         <- wrong, 99 is too high so it should say LOWER
+Guess  21 -> Correct! | You won! The secret was 21. Final score: 40
+Clicked New Game -> You already won. Start a new game to play again.   <- stuck, can't play again
+```
+
 ---
 
 ## 2. How did you use AI as a teammate?

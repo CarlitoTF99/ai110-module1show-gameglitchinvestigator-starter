@@ -49,6 +49,16 @@ Describe your fixed game in numbered steps so a reader can follow along without 
 6. Made attempts consistent. A new game, a difficulty change and the first page load now all start at 0 attempts, so you get the full number of guesses the sidebar shows.
 Moved the logic into logic_utils.py and added tests. All 11 pytest tests pass.
 
+**Game session (after the fixes)**
+
+```
+Difficulty: Normal | Secret (debug tab): 21 | Guess a number between 1 and 50. Attempts left: 8
+Guess   1 -> Go HIGHER!
+Guess  99 -> Go LOWER!
+Guess  21 -> Correct! | You won! The secret was 21. Final score: 60
+Clicked New Game -> new game started, status back to "playing" and I can guess again
+```
+
 **Screenshot** ![alt text](image.png)
 
 ## 🧪 Test Results
